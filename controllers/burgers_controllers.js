@@ -4,6 +4,11 @@ const router = express.Router();
 
 const burger = require('../models/burger.js');
 
+
+router.get('/', function(req,res) {
+    res.redirect('/index');
+});
+
 //Get Route
 router.get('/', function(req, res) {
     burger.all(function(data) {
@@ -58,4 +63,4 @@ router.delete('/api/burgers/:id', function(req, res) {
 
 
 // Export routes
-module.export = router;
+module.exports = router;
