@@ -11,7 +11,7 @@ $(function() {
       burger_name: $("#burger").val().trim(),
       devoured: 0
       };
-
+      console.log(newBurger);
       // Send the POST request using ajax.
       $.ajax("/api/burgers", {
       type: "POST",
@@ -42,14 +42,15 @@ $(function() {
     });
 
   //Click event for "Devour me" button.
-  $(".change-devour").on("click", function(event) {
+  $(".eat").on("click", function(event) {
       var id = $(this).data("id");
       var newDevour = $(this).data("newdevour");
   
       var newDevourState = {
-        devoured: "true"
+        devoured: true
       };
-  
+      console.log(newDevour);
+      console.log(id);
       // Send the PUT request using ajax.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",

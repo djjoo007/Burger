@@ -1,36 +1,32 @@
-<h1>Eat the Burger!</h1>
-
-<div class="row">
-<div class= "col-4">
-<h2>Ready to Eat!</h2>
-<ul>
-  {{#each burgers}}
-      {{#unless devoured}}
-    {{> burgers/burger-block devour=false}}
-        {{/unless}}
-  {{/each}}
-</ul>
-</div>
-<div class= "col-4"></div>
-<div class= "col-4">
-<h2>Eaten!</h2>
-<ul>
-  {{#each burgers}}
-      {{#if devoured}}
-    {{> burgers/burger-devoured devour=true}}
-        {{/if}}
-  {{/each}}
-</ul>
-</div>
-</div>
-
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burger" name="name">
-    <button class = "btn btn-primary" type="submit">Add Burger</button>
+  <div class="jumbotron text-center bg-primary text-white">
+      <h1>Burgers Burgers Burgers</h1>
   </div>
 
-</form>
-</div>
+  <div class="row">
+      <div class="col">
+          <h2 class='text-center'>Ready to Eat!</h2>
+          <ul>
+              {{#each burgers}}
+              {{#unless devoured}}
+              {{> burgers/burger-block devoured=false}}
+              {{/unless}}
+              {{/each}}
+          </ul>
+      </div>
+      <div class="col">
+          <h2 class='text-center'>Eat the Burger!</h2>
+          <ul>
+              {{#each burgers}}
+              {{#if devoured}}
+              {{> burgers/burger-block devoured=true}}
+              {{/if}}
+              {{/each}}
+          </ul>
+      </div>
+  </div>
+
+    <div class="form-group">
+          <label for="burger">Burger Name:</label>
+          <input type="text" id="burger" name="name">
+          <button class="btn btn-primary" type="submit">Add Burger</button>
+    </div>

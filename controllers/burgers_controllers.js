@@ -5,9 +5,9 @@ const router = express.Router();
 const burger = require('../models/burger.js');
 
 
-router.get('/', function(req,res) {
-    res.redirect('/index');
-});
+// router.get('/', function(req,res) {
+//     res.redirect('/index');
+// });
 
 //Get Route
 router.get('/', function(req, res) {
@@ -21,7 +21,7 @@ router.get('/', function(req, res) {
 });
 
 //Post Route
-router.post('/api/burger', function(req, res) {
+router.post('/api/burgers', function(req, res) {
     burger.create([
         'burger_name', 'devoured'
     ], [
