@@ -47,7 +47,7 @@ $(function() {
       var newDevour = $(this).data("newdevour");
   
       var newDevourState = {
-        devoured: true
+        devoured: newDevour
       };
       console.log(newDevour);
       console.log(id);
