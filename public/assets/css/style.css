@@ -4,6 +4,14 @@ html {
     min-height: 80%;
 }
 
+h1 {
+  font-family: 'Bungee Shade', cursive;
+}
+
+h2 {
+  font-family: 'Bungee Shade', cursive;
+}
+
 body {
     background-image: url('/assets/img/burger.jpg');
     background-repeat: no-repeat;
