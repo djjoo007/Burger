@@ -15,5 +15,5 @@ The application is a burger logger.  One side will show Burgers ready to be eate
 * Express
 * Heroku with JAWSdb add-on
 
-##Links
+## Links
 https://quiet-atoll-23729.herokuapp.com/
